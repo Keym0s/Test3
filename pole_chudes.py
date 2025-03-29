@@ -11,3 +11,4 @@ class PoleChudes:
             return ["П", "_", "_", "_", "_"]
         elif letter.upper() == "Н":
             return ["П", "_", "_", "_", "Н"]
+        return ["П", "_", "_", "_", "Н"]
