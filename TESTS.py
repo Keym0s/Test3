@@ -10,3 +10,8 @@ def test_guess_letter():
     assert game.guess_letter("п") == ["П", "_", "_", "_", "_"]
     assert game.guess_letter("н") == ["П", "_", "_", "_", "Н"]
     assert game.guess_letter("ы") == ["П", "_", "_", "_", "Н"]
+
+def test_guess_word():
+    game = PoleChudes("питон")
+    assert game.guess_word("питон") is True
+    assert game.guessed_word == ["П", "И", "Т", "О", "Н"]
