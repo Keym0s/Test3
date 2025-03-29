@@ -16,3 +16,9 @@ class PoleChudes:
         elif letter.upper() == "Н":
             return ["П", "_", "_", "_", "Н"]
         return ["П", "_", "_", "_", "Н"]
+
+    def guess_word(self, word):
+        if word.upper() == self.word:
+            self.guessed_word = list(self.word)
+            return True
+        return False
