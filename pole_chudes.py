@@ -4,6 +4,7 @@ class PoleChudes:
     def __init__(self, word):
         self.word = word.upper()
         self.guessed_word = ["_" for _ in word]
+        self.points = 0
 
     def guess_letter(self, letter):
         # todo: реализовать метод guess_letter вместо заглушки
@@ -22,3 +23,6 @@ class PoleChudes:
             self.guessed_word = list(self.word)
             return True
         return False
+
+    def add_points(self, points):
+        self.points += points
