@@ -14,6 +14,11 @@ def load_words(filename="words.txt"):
 
 
 def load_wheel_options(filename="wheel_options.txt"):
+    """
+    Функция загрузки возможных состояний барабана из файла.
+    @param filename: Имя файла с состояниями барабана.
+    @return: Список возможных значений барабана.
+    """
     with open(filename, encoding="utf-8") as file:
         options = [line.strip() for line in file if line.strip()]
     return options
