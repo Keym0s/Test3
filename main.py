@@ -25,6 +25,11 @@ def load_wheel_options(filename="wheel_options.txt"):
 
 
 def spin_wheel(wheel_options):
+    """
+    Функция случайного выбора сектора барабана.
+    @param wheel_options: Список возможных значений барабана.
+    @return: Случайно выбранное значение (число или текст).
+    """
     result = random.choice(wheel_options)
     print(f"\nБарабан крутится... Выпало: {result}")
     return int(result) if result.isdigit() else result
