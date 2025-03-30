@@ -7,16 +7,12 @@ class PoleChudes:
         self.points = 0
 
     def guess_letter(self, letter):
-        # todo: реализовать метод guess_letter вместо заглушки
-        # Метод, проверяющий наличие буквы в слове
-        # @param letter буква, введенная пользователем
-        # @return результат проверки слова (открыть отгаданную букву,
-        # либо оставить слово неизменным)
-        if letter.upper() == "П":
-            return ["П", "_", "_", "_", "_"]
-        elif letter.upper() == "Н":
-            return ["П", "_", "_", "_", "Н"]
-        return ["П", "_", "_", "_", "Н"]
+        letter = letter.upper()
+        if letter in self.word:
+            for i, char in enumerate(self.word):
+                if char == letter:
+                    self.guessed_word[i] = letter
+        return self.guessed_word
 
     def guess_word(self, word):
         if word.upper() == self.word:
