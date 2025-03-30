@@ -35,4 +35,8 @@ class PoleChudes:
         return False
 
     def add_points(self, points):
+        """
+        Метод начисления очков игроку.
+        @param points: Количество очков для начисления.
+        """
         self.points += points
