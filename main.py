@@ -14,3 +14,9 @@ def load_wheel_options(filename="wheel_options.txt"):
     return options
 
 
+def spin_wheel(wheel_options):
+    result = random.choice(wheel_options)
+    print(f"\nБарабан крутится... Выпало: {result}")
+    return int(result) if result.isdigit() else result
+
+
