@@ -7,6 +7,11 @@ class PoleChudes:
         self.points = 0
 
     def guess_letter(self, letter):
+        """
+        Метод, проверяющий наличие буквы в слове.
+        @param letter: Буква, введенная пользователем.
+        @return: Обновленный список угадываемого слова.
+        """
         letter = letter.upper()
         if letter in self.word:
             for i, char in enumerate(self.word):
