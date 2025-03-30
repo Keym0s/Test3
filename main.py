@@ -3,6 +3,11 @@ from pole_chudes import PoleChudes
 
 
 def load_words(filename="words.txt"):
+    """
+    Функция загрузки списка слов из файла.
+    @param filename: Имя файла со словами.
+    @return: Список слов из файла.
+    """
     with open(filename, encoding="utf-8") as file:
         words = [line.strip() for line in file if line.strip()]
     return words
