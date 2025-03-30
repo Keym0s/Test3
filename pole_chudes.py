@@ -24,6 +24,11 @@ class PoleChudes:
         return self.guessed_word
 
     def guess_word(self, word):
+        """
+        Метод проверки полного угадывания слова.
+        @param word: Слово, введенное пользователем.
+        @return: True, если слово угадано правильно, иначе False.
+        """
         if word.upper() == self.word:
             self.guessed_word = list(self.word)
             return True
