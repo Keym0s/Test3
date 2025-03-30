@@ -36,6 +36,9 @@ def spin_wheel(wheel_options):
 
 
 def main():
+    """
+    Основная функция, запускающая игру
+    """
     print("Добро пожаловать в игру 'Поле чудес'!")
     words = load_words()
     secret_word = random.choice(words)
