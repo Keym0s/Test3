@@ -1,5 +1,6 @@
 import pytest
 from pole_chudes import PoleChudes
+import main
 
 def test_game_class_creation():
     game = PoleChudes("питон")
@@ -22,3 +23,9 @@ def test_points():
     assert game.points == 100
     game.add_points(50)
     assert game.points == 150
+
+def test_spin_wheel():
+    wheel_options = ["100", "Пропуск хода", "Банкрот"]
+    for _ in wheel_options:
+        result = main.spin_wheel(wheel_options)
+        assert result in [int(opt) if opt.isdigit() else opt for opt in wheel_options]
